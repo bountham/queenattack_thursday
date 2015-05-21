@@ -4,7 +4,7 @@ function queenattack_menu (){
         $items['queenattack'] = array(
             'title' => 'Let play queenattack',
             'page callback' => 'drupal_get_form',
-            'page arguments' => 'queenattack_form',
+            'page arguments' => array('queenattack_form'),
             'access callback' => TRUE,
             'type' => MENU_NORMAL_ITEM,
         );
