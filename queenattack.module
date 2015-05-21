@@ -57,7 +57,7 @@ function queenattack_form_submit($form, &$form_state) {
 function result_function() {
     $empty_string = $_SESSION['array1'];
     var_dump($_SESSION['array1']);
-    var_dump($empty_string)
+    var_dump($empty_string);
     return $empty_string;
 
 }
