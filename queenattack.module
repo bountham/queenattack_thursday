@@ -44,7 +44,7 @@ function queenattack_form_submit($form, &$form_state) {
     $first_number_exploded = explode(' ', $first_number);
     $empty_array = array();
     foreach($first_number_exploded as $element) {
-        array.push($empty_array, $element);
+        array_push($empty_array, $element);
     }
     $_SESSION['array1'] = $empty_array;
     $form_state['redirect'] = 'result';
