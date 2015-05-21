@@ -42,7 +42,15 @@ function queenattack_form() {
 function queenattack_form_submit($form, &$form_state) {
     $first_number = $form_state['values']['first_position'];
     $first_number_exploded = explode(' ', $first_number);
+    $empty_array = array();
     foreach($first_number_exploded as $element) {
-        echo $element;
+        array.push($empty_array, $element);
     }
+    $_SESSION['array1'] = $empty_array;
+    $form_state['redirect'] = 'result';
+}
+
+function result_function() {
+    $empty_string = $_SESSION['array1'];
+    return $empty_string;
 }
