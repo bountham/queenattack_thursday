@@ -1,0 +1,5 @@
+name = Queenattack
+description = display queenattack
+package = Jon and tommy
+core = 7.x
+files[] = queenattack.module

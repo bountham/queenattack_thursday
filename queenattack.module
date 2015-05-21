@@ -1,0 +1,40 @@
+ <?php
+function queenattack_menu (){
+        $items = array();
+        $items['queenattack'] = array(
+            'title' => 'Let play queenattack',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => 'queenattack_form',
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+        $items['result'] = array(
+            'title' => 'Result Page',
+            'page callback' => 'result_function',
+            'access callback' => TRUE,
+            'type' = MENU_CALLBACK,
+        );
+        return $items;
+}
+
+function queenattack_form() {
+    $form['first_position'] = array(
+        '#title' => 'Queen Position',
+        '#type' => 'textfield',
+        '#description' => t('Please enter your queen position'),
+
+
+    );
+    $form['second_position'] = array(
+        '#title' => 'Second Position',
+        '#type' => 'textfield',
+        '#description' => t('Please enter your second position'),
+
+    );
+    $form['submit'] = array(
+        '#type' => "submit",
+        '#value' => 'Go!',
+
+    );
+    return $form;
+}
