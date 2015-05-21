@@ -38,3 +38,11 @@ function queenattack_form() {
     );
     return $form;
 }
+
+function queenattack_form_submit($form, &$form_state) {
+    $first_number = $form_state['values']['first_position'];
+    $first_number_exploded = explode(' ', $first_number);
+    foreach($first_number_exploded as $element) {
+        echo $element;
+    }
+}
